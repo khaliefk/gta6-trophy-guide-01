@@ -1,0 +1,34 @@
+body { background: #0f1218; color: #edeae4; }
+a { color: #ff8a70; }
+.sub, .grades, .row .desc, .detail .sources, footer { color: #8e96a3; }
+.top { background: #141922; border-bottom: 1px solid #2a313d; }
+h1, h2, h3, .progress .big { color: #f4efe8; }
+.bar { background: #262d38; }
+.bar span { background: #ff6b4a; }
+button, .importBtn { background: #232a35; color: #edeae4; border: 1px solid #39424f; border-radius: 6px; padding: 8px 12px; }
+button:hover, .importBtn:hover { border-color: #ff6b4a; }
+select, input[type="text"], input[type="number"], textarea { background: #171c24; color: #edeae4; border: 1px solid #39424f; }
+.tabs { background: #141922; border-bottom: 1px solid #2a313d; }
+.tabs a { color: #aab2bf; }
+.tabs a.active { background: #0f1218; color: #ff8a70; }
+.chip { background: #1e242e; color: #c6cdd8; border: 1px solid #39424f; }
+.chip.active { background: #ff6b4a; color: #fff; border-color: #ff6b4a; }
+.row { background: #171c24; border: 1px solid #232a35; border-radius: 10px; margin-bottom: 6px; }
+.row:hover { border-color: #ff6b4a; }
+.row + .row { border-top: 1px solid #232a35; }
+.pill.platinum { background: #dfe7ef; color: #1d2129; }
+.pill.gold { background: #d4af5a; color: #1d2129; }
+.pill.silver { background: #aeb6bf; color: #1d2129; }
+.pill.bronze { background: #c98b5e; color: #1d2129; }
+.pill.tag { background: #262d38; color: #aab2bf; }
+.count { color: #ffb199; }
+.detail, .card, .nextCard { background: #171c24; border: 1px solid #2a313d; }
+.detail .earnBtn { background: #ff6b4a; color: #fff; border: none; }
+.detail .earnBtn.earned { background: #2e7d5b; }
+.warn { background: #2a1a16; border: 1px solid #ff6b4a; }
+.warn h2 { color: #ffb199; }
+.facts td { border-bottom: 1px solid #2a313d; }
+table.data th { color: #8e96a3; border-bottom: 1px solid #2a313d; }
+table.data td { border-bottom: 1px solid #232a35; }
+.masked { color: #8e96a3; }
+.empty { color: #8e96a3; }
