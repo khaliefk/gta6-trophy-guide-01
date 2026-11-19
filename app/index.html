@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leonida Trophy Atlas: GTA VI trophy guide and tracker</title>
+<meta name="description" content="A guide and checklist tracker for all 55 Grand Theft Auto VI trophies on PlayStation 5. Works offline, saves progress in the browser.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <p class="kicker">Grand Theft Auto VI &middot; PlayStation 5</p>
+  <h1>Leonida Trophy Atlas</h1>
+  <p class="lede">All 55 trophies, each with its official name and description, a guide in plain words, and a checklist that remembers where you stopped. The whole page runs from its own files. No account, no network, no tracking.</p>
+  <div class="progress" id="progress" aria-live="polite">
+    <div class="progress-text"><span id="earned-count">0</span> of <span id="total-count">55</span> earned &middot; <span id="earned-pct">0%</span></div>
+    <div class="bar"><div class="bar-fill" id="bar-fill" style="width:0%"></div></div>
+    <div class="grade-counts" id="grade-counts"></div>
+  </div>
+</header>
+
+<main>
+  <section class="warn" id="warn">
+    <h2>Read this before you start</h2>
+    <ul>
+      <li>GTA VI has <strong>no mission replay</strong> and no New Game Plus. Keep a manual save at the start of every chapter, plus one untouched save from just before the final mission.</li>
+      <li><strong>Positive Mental Attitude</strong> is the one trophy you can miss. Do Lucia&rsquo;s balcony meditation in Chapter 1. It never comes back.</li>
+      <li>Cheats switch off trophies and saving on that save. Keep them off your trophy save.</li>
+      <li>Five hidden trophies have no confirmed method yet. Their cards say so plainly. Do not grind blindly for them.</li>
+    </ul>
+  </section>
+
+  <section class="toolbar" aria-label="Find and filter trophies">
+    <div class="tool-row">
+      <label class="search">Search
+        <input type="search" id="q" placeholder="Name, mission, place&hellip;" autocomplete="off">
+      </label>
+      <label>Grade
+        <select id="grade">
+          <option value="">All grades</option>
+          <option value="platinum">Platinum</option>
+          <option value="gold">Gold</option>
+          <option value="silver">Silver</option>
+          <option value="bronze">Bronze</option>
+        </select>
+      </label>
+      <label>Kind
+        <select id="kind">
+          <option value="">All kinds</option>
+          <option value="story">Story</option>
+          <option value="missable">Missable</option>
+          <option value="collectible">Collectibles</option>
+          <option value="activity">Activities</option>
+          <option value="robbery">Robberies</option>
+          <option value="side">Side stories</option>
+          <option value="grind">Grinds</option>
+          <option value="online">Online</option>
+        </select>
+      </label>
+      <label>Progress
+        <select id="earned">
+          <option value="">Show all</option>
+          <option value="no">Not earned yet</option>
+          <option value="yes">Earned</option>
+        </select>
+      </label>
+      <label>Sort
+        <select id="sort">
+          <option value="stage">Roadmap order</option>
+          <option value="grade">Grade, best first</option>
+          <option value="name">Name, A to Z</option>
+        </select>
+      </label>
+    </div>
+    <div class="tool-row">
+      <label class="check"><input type="checkbox" id="spoilers"> Hide story spoilers until earned</label>
+      <span class="spacer"></span>
+      <button type="button" id="export">Export progress</button>
+      <button type="button" id="import-btn">Import progress</button>
+      <input type="file" id="import-file" accept="application/json,.json" hidden>
+      <button type="button" id="reset" class="danger">Reset all</button>
+    </div>
+    <p class="count-line" id="count-line" aria-live="polite"></p>
+  </section>
+
+  <section class="list" aria-label="Trophy list">
+    <h2>All 55 trophies</h2>
+    <div id="cards"></div>
+    <p class="empty" id="empty" hidden>No trophies match these filters. Loosen one and try again.</p>
+  </section>
+
+  <section class="nextup" id="nextup" aria-label="Next up">
+    <h2>Next up</h2>
+    <p class="hint">The next five trophies on the roadmap that you have not earned yet.</p>
+    <ol id="next-list"></ol>
+  </section>
+
+  <section class="roadmap" id="roadmap" aria-label="Roadmap to the platinum">
+    <h2>Roadmap to the platinum</h2>
+    <p class="hint">About 200 hours all in, by community estimates. Three stages, in order. Finish a stage before you grind the next one.</p>
+    <div class="stages" id="stages"></div>
+  </section>
+
+  <section class="hundred" aria-label="100 percent checklist">
+    <h2>The 100% checklist</h2>
+    <p>The Gold trophy <strong>A Long Road</strong> needs 100% completion. The in-game checklist appears under Progress, then Stats, then 100% Completion, after the story. These are the parts of it the launch guides confirm:</p>
+    <ul>
+      <li>Finish the story, all five chapters.</li>
+      <li>300 stunts. The trophy stops at 250, the checklist wants 50 more.</li>
+      <li>70 of the 80 challenges.</li>
+      <li>200 of the 277 base vehicle models discovered.</li>
+      <li>All 8 bank vaults robbed.</li>
+      <li>All 39 illegal operations robbed.</li>
+      <li>Work you do before the story ends still counts.</li>
+    </ul>
+  </section>
+
+  <section class="sources" aria-label="Sources">
+    <h2>Where the facts come from</h2>
+    <p>Trophy names, descriptions and grades are the official PlayStation list, as listed by Exophase and PSNProfiles and reported on 18 November 2026. Each trophy card links its own source. The guides on this page are written for this page, in the author's own words. Nothing here is copied from another guide. The five unconfirmed trophies are marked as such instead of dressed up with a guess.</p>
+    <ul>
+      <li><a href="https://outputlag.com/guides/gta-6-trophy-list/">Output Lag: GTA 6 Trophy List, all 55 trophies and achievements</a></li>
+      <li><a href="https://www.gtavibes.com/guides/gta-6-trophy-list-achievements">GTAVibes: GTA 6 Trophy List, all 55 trophies and achievements</a></li>
+      <li><a href="https://egamers.io/gta-6-trophy-list-all-55-trophies-and-achievements-plus-the-hardest-ones/">EGamers: GTA 6 Trophy List, all 55 trophies and achievements</a></li>
+    </ul>
+    <p class="fine">Grand Theft Auto VI is developed and published by Rockstar Games. This is an unofficial fan guide. It uses no Rockstar logo, artwork, box art or game screenshot.</p>
+  </section>
+</main>
+
+<footer>
+  <p>Leonida Trophy Atlas. Your progress lives in this browser only. Export it before you clear site data.</p>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
