@@ -1,0 +1,229 @@
+/* Leonida Trophy Atlas. One stylesheet, no frameworks, no web fonts. */
+
+:root {
+  --bg: #14061f;
+  --panel: #21102f;
+  --panel2: #2c1542;
+  --line: #4a2a63;
+  --ink: #f7f0e6;
+  --muted: #c9b8d6;
+  --pink: #ff2e88;
+  --teal: #2de1c2;
+  --gold: #f5c542;
+  --silver: #cfd6e4;
+  --bronze: #e09a5f;
+  --danger: #ff5a5a;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  font-size: 17px;
+  line-height: 1.55;
+}
+
+a { color: var(--teal); }
+a:visited { color: #8fe8d8; }
+
+.top {
+  padding: 42px 20px 30px;
+  background: linear-gradient(155deg, #3a0e50 0%, #14061f 64%);
+  border-bottom: 3px solid var(--pink);
+}
+
+.kicker {
+  margin: 0 0 6px;
+  color: var(--teal);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+h1 {
+  margin: 0 0 10px;
+  font-size: 42px;
+  line-height: 1.05;
+  letter-spacing: -0.01em;
+}
+
+.lede { max-width: 660px; margin: 0 0 20px; color: var(--muted); }
+
+.progress-text { font-size: 20px; font-weight: 700; }
+.bar {
+  height: 14px;
+  margin: 8px 0 10px;
+  background: #0d0516;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  overflow: hidden;
+}
+.bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--pink), var(--gold));
+  transition: width 0.25s ease;
+}
+.grade-counts { color: var(--muted); font-size: 14px; }
+
+main { max-width: 880px; margin: 0 auto; padding: 0 20px 44px; }
+section { margin-top: 28px; }
+h2 { font-size: 24px; margin: 0 0 8px; }
+.hint { color: var(--muted); margin: 0 0 12px; }
+.fine { color: var(--muted); font-size: 14px; }
+
+.warn {
+  background: var(--panel);
+  border: 1px solid var(--gold);
+  border-left: 6px solid var(--gold);
+  border-radius: 10px;
+  padding: 16px 18px;
+}
+.warn ul { margin: 8px 0 0; padding-left: 20px; }
+.warn li { margin: 6px 0; }
+
+.toolbar {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 14px;
+}
+.tool-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: end;
+}
+.tool-row + .tool-row { margin-top: 12px; }
+.toolbar label { font-size: 13px; color: var(--muted); font-weight: 600; }
+.toolbar label.search { flex: 1 1 220px; }
+.toolbar input[type="search"],
+.toolbar select {
+  display: block;
+  width: 100%;
+  margin-top: 4px;
+  padding: 9px 10px;
+  background: #0d0516;
+  color: var(--ink);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  font-size: 15px;
+}
+.toolbar select { width: auto; min-width: 130px; }
+.check {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 15px;
+  color: var(--ink);
+  font-weight: 600;
+  padding: 8px 0;
+}
+.check input { width: 18px; height: 18px; accent-color: var(--pink); }
+.spacer { flex: 1; }
+button {
+  padding: 9px 14px;
+  background: var(--teal);
+  color: #08231d;
+  border: 0;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+}
+button:hover { filter: brightness(1.1); }
+button.danger { background: transparent; color: var(--danger); border: 1px solid var(--danger); }
+.count-line { margin: 12px 0 0; color: var(--muted); font-size: 14px; }
+
+.nextup ol { margin: 0; padding-left: 22px; }
+.nextup li { margin: 8px 0; }
+.nextup li .tag { margin-left: 6px; }
+.nextup li.done { color: var(--muted); text-decoration: line-through; }
+
+.stages { display: grid; gap: 12px; }
+.stage {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 14px 16px;
+}
+.stage h3 { margin: 0 0 4px; font-size: 18px; }
+.stage h3 .hours { float: right; color: var(--gold); font-size: 14px; }
+.stage p { margin: 4px 0 8px; color: var(--muted); }
+.stage .mini-bar { height: 8px; background: #0d0516; border-radius: 999px; overflow: hidden; }
+.stage .mini-fill { height: 100%; background: var(--teal); }
+.stage .stage-count { font-size: 13px; color: var(--muted); margin-top: 6px; }
+
+.hundred ul { padding-left: 20px; }
+.hundred li { margin: 6px 0; }
+
+#cards { display: grid; gap: 12px; }
+.card {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 15px 16px;
+}
+.card.earned { border-color: var(--teal); }
+.card-head { display: flex; gap: 10px; align-items: flex-start; }
+.card input[type="checkbox"] {
+  width: 22px;
+  height: 22px;
+  flex: none;
+  margin-top: 2px;
+  accent-color: var(--teal);
+  cursor: pointer;
+}
+.card-title { flex: 1; min-width: 0; }
+.card-title h3 { margin: 0; font-size: 19px; line-height: 1.25; }
+.card-title .official { margin: 4px 0 0; color: var(--muted); font-style: italic; }
+.chip {
+  display: inline-block;
+  flex: none;
+  padding: 2px 9px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.chip.platinum { background: var(--teal); color: #08231d; }
+.chip.gold { background: var(--gold); color: #241a02; }
+.chip.silver { background: var(--silver); color: #1d2733; }
+.chip.bronze { background: var(--bronze); color: #2a1503; }
+.tag {
+  display: inline-block;
+  margin: 8px 6px 0 0;
+  padding: 1px 8px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  font-size: 12px;
+  color: var(--muted);
+}
+.tag.missable { border-color: var(--danger); color: var(--danger); font-weight: 700; }
+.tag.hidden-flag { border-color: var(--pink); color: var(--pink); }
+.tag.unconfirmed { border-color: var(--gold); color: var(--gold); }
+.card .guide { margin: 10px 0 6px; }
+.card .meta { margin: 6px 0 0; font-size: 14px; color: var(--muted); }
+.card .meta a { font-size: 14px; }
+.spoiled { color: var(--muted); font-style: italic; }
+.empty { color: var(--muted); }
+
+.sources ul { padding-left: 20px; }
+.sources li { margin: 6px 0; }
+
+footer {
+  border-top: 1px solid var(--line);
+  padding: 18px 20px 30px;
+  color: var(--muted);
+  font-size: 14px;
+  text-align: center;
+}
+
+@media (max-width: 560px) {
+  h1 { font-size: 32px; }
+  .stage h3 .hours { float: none; display: block; }
+}
